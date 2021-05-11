@@ -1,8 +1,7 @@
-/* eslint-disable */
 import * as PIXI from "pixi.js";
 import "./style.css";
-import {gameWidth,gameHeight} from './config';
-import {setBirdAsSprite} from "./components/bird";
+import { gameWidth, gameHeight, loadGameAssets } from "./config";
+import { setBirdAsSprite } from "./components/bird";
 
 declare const VERSION: string;
 
@@ -12,40 +11,24 @@ const app = new PIXI.Application({
     backgroundColor: 0xd3d3d3,
     width: gameWidth,
     height: gameHeight,
+    antialias: true,    // default: false
+    transparent: true, // default: false
+    resolution: 1       // default: 1
 });
 
 const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
     await loadGameAssets();
+    setInterval(() => {
+        app.renderer.backgroundColor = Math.random() * 0xFFFFFF;
+    }, 12000);
 
     document.body.appendChild(app.view);
     resizeCanvas();
 
     setBirdAsSprite(stage);
-    /* const birdFromSprite = getBird();
-    birdFromSprite.anchor.set(0.5, 0.5);
-    birdFromSprite.position.set(gameWidth / 2, gameHeight / 2);
-
-    stage.addChild(birdFromSprite); */
 };
-
-async function loadGameAssets(): Promise<void> {
-    return new Promise((res, rej) => {
-        const loader = PIXI.Loader.shared;
-        loader.add("rabbit", "./assets/simpleSpriteSheet.json");
-
-        loader.onComplete.once(() => {
-            res();
-        });
-
-        loader.onError.once(() => {
-            rej();
-        });
-
-        loader.load();
-    });
-}
 
 function resizeCanvas(): void {
     const resize = () => {
