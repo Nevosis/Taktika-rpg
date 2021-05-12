@@ -2,6 +2,7 @@ import * as PIXI from "pixi.js";
 import "./style.css";
 import { gameWidth, gameHeight, loadGameAssets } from "./config";
 import { setBirdAsSprite } from "./components/bird";
+import { initKeyboardInterraction } from "./services/interractionService/keyboard";
 
 declare const VERSION: string;
 
@@ -24,6 +25,8 @@ window.onload = async (): Promise<void> => {
         app.renderer.backgroundColor = Math.random() * 0xFFFFFF;
     }, 12000);
 
+    initKeyboardInterraction();
+
     document.body.appendChild(app.view);
     resizeCanvas();
 
@@ -32,7 +35,6 @@ window.onload = async (): Promise<void> => {
 
 function resizeCanvas(): void {
     const resize = () => {
-        console.warn("mao");
         // Resize le render a tout l'écran tout le temps
         //app.renderer.resize(window.innerWidth, window.innerHeight);
         // Fait le scale
