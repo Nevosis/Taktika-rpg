@@ -20,14 +20,37 @@ export function setBirdAsSprite(stage: PIXI.Container): void {
     birdToHide.position.set(0 * birdWidth, 0 * birdHeight);
     birdToHide.interactive = true;
 
+    // CLICK
     birdToHide.on("click", () => {
-        birdToHide.animationSpeed = (birdToHide.animationSpeed + 0.1) % 1;
-        console.warn(birdToHide.animationSpeed);
+        birdToHide.animationSpeed = Number(((birdToHide.animationSpeed + 0.1) % 1).toFixed(1));
     });
 
-    birdToHide.on("mousedown", () => {
-        console.warn("2");
+    // Pointer over
+    birdToHide.on("pointerover", () => {
+        birdToHide.textures[0] = PIXI.Texture.from("birdUpSel.png");
+        birdToHide.textures[1] = PIXI.Texture.from("birdMiddleSel.png");
+        birdToHide.textures[2] = PIXI.Texture.from("birdDownSel.png");
+        birdToHide.texture = PIXI.Texture.from("birdUpSel.png");
+        if (birdToHide.currentFrame === 0)
+            birdToHide.texture = PIXI.Texture.from("birdUpSel.png");
+        if (birdToHide.currentFrame === 1)
+            birdToHide.texture = PIXI.Texture.from("birdMiddleSel.png");
+        if (birdToHide.currentFrame === 2)
+            birdToHide.texture = PIXI.Texture.from("birdDownSel.png");
     });
+    // Pointer OUT
+    birdToHide.on("pointerout", () => {
+        birdToHide.textures[0] = PIXI.Texture.from("birdUp.png");
+        birdToHide.textures[1] = PIXI.Texture.from("birdMiddle.png");
+        birdToHide.textures[2] = PIXI.Texture.from("birdDown.png");
+        if (birdToHide.currentFrame === 0)
+            birdToHide.texture = PIXI.Texture.from("birdUp.png");
+        if (birdToHide.currentFrame === 1)
+            birdToHide.texture = PIXI.Texture.from("birdMiddle.png");
+        if (birdToHide.currentFrame === 2)
+            birdToHide.texture = PIXI.Texture.from("birdDown.png");
+    });
+
 
     stage.addChild(mainBird);
     stage.addChild(birdToHide);
@@ -55,7 +78,7 @@ function getBird(): PIXI.AnimatedSprite {
 
     bird.loop = true;
 
-    bird.animationSpeed = 0.4;
+    bird.animationSpeed = 0;
     bird.play();
     bird.scale.set(scale);
 

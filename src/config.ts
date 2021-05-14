@@ -12,10 +12,11 @@ export async function loadGameAssets() {
         loader.add("rabbit", "./assets/simpleSpriteSheet.json");
 
         loader.onComplete.once(() => {
+            console.warn("comple");
             resolve();
         });
 
-        loader.onError.once(() => {
+        loader.onError.once((e) => {
             rej();
         });
 

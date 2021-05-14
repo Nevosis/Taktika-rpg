@@ -59,7 +59,7 @@
         "no-this-before-super": "error",
         "no-undef": "error",
         "no-unexpected-multiline": "error",
-        "no-unreachable": "error",
+        "no-unreachable": "warn",
         "no-unsafe-finally": "error",
         "no-unsafe-negation": "error",
         "no-unused-labels": "error",
