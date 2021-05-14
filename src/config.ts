@@ -1,9 +1,9 @@
 import * as PIXI from "pixi.js";
+import { pixelSquareRatio, height, width } from "./services/mapService/config"
 
+export const gameWidth = width * pixelSquareRatio;
 
-export const gameWidth = 800;
-
-export const gameHeight = 600;
+export const gameHeight = height * pixelSquareRatio;
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export async function loadGameAssets() {

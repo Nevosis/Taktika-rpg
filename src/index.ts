@@ -1,6 +1,7 @@
 import * as PIXI from "pixi.js";
 import "./style.css";
 import { gameWidth, gameHeight, loadGameAssets } from "./config";
+import { initMapService } from "./services/mapService/map";
 import { setBirdAsSprite } from "./components/bird";
 import { initKeyboardInterraction } from "./services/interractionService/keyboard";
 
@@ -30,6 +31,7 @@ window.onload = async (): Promise<void> => {
     document.body.appendChild(app.view);
     resizeCanvas();
 
+    initMapService(stage);
     setBirdAsSprite(stage);
 };
 

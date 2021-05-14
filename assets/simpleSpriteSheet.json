@@ -144,6 +144,78 @@
                 "h": 12
             }
         },
+        "groundWhite.png": {
+            "frame": {
+                "x": 98,
+                "y": 242,
+                "w": 16,
+                "h": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 16,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 16,
+                "h": 16
+            }
+        },
+        "groundRed.png": {
+            "frame": {
+                "x": 115,
+                "y": 242,
+                "w": 16,
+                "h": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 16,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 16,
+                "h": 16
+            }
+        },
+        "groundBrowny.png": {
+            "frame": {
+                "x": 98,
+                "y": 259,
+                "w": 16,
+                "h": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 16,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 16,
+                "h": 16
+            }
+        },
+        "groundBlue.png": {
+            "frame": {
+                "x": 115,
+                "y": 259,
+                "w": 16,
+                "h": 16
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 16,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 16,
+                "h": 16
+            }
+        },
         "bronzeMedal.png": {
             "frame": {
                 "x": 0,
