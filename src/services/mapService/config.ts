@@ -16,12 +16,22 @@ const dirt = {
     textureFrom: "groundWhite.png",
     textureFromSelected: "groundBrowny.png",
     interractive: true,
+    damagable: {
+        damageTreeshold: 5,
+        textureFromDamagable: "groundRed.png",
+        textureFromSelectedDamagable: "groundRed.png",
+    }
 };
 
 export type SquareType = {
     textureFrom: string;
     textureFromSelected: string;
     interractive: boolean;
+    damagable?: {
+        damageTreeshold?: number,
+        textureFromDamagable?: string,
+        textureFromSelectedDamagable?: string,
+    }
 }
 
 export const squares = Object.freeze({

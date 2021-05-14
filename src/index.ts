@@ -4,6 +4,7 @@ import { gameWidth, gameHeight, loadGameAssets } from "./config";
 import { initMapService } from "./services/mapService/map";
 import { setBirdAsSprite } from "./components/bird";
 import { initKeyboardInterraction } from "./services/interractionService/keyboard";
+import { debug } from "./utils/debug";
 
 declare const VERSION: string;
 
@@ -29,6 +30,8 @@ window.onload = async (): Promise<void> => {
     initKeyboardInterraction();
 
     document.body.appendChild(app.view);
+
+    debug();
     resizeCanvas();
 
     initMapService(stage);

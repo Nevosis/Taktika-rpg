@@ -3,3 +3,10 @@ body {
     margin: 0 auto;
     background-color: black;
 }
+
+#Debug {
+    color:red;
+    top:0;
+    right:0;
+    position:fixed;
+}
