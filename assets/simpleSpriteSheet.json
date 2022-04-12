@@ -129,7 +129,7 @@
         "birdDownSel.png": {
             "frame": {
                 "x": 77,
-                "y": 255,
+                "y": 268,
                 "w": 17,
                 "h": 12
             },
@@ -164,7 +164,7 @@
         },
         "groundRed.png": {
             "frame": {
-                "x": 115,
+                "x": 113,
                 "y": 242,
                 "w": 16,
                 "h": 16
@@ -183,7 +183,7 @@
         "groundBrowny.png": {
             "frame": {
                 "x": 98,
-                "y": 259,
+                "y": 257,
                 "w": 16,
                 "h": 16
             },
@@ -200,8 +200,8 @@
         },
         "groundBlue.png": {
             "frame": {
-                "x": 115,
-                "y": 259,
+                "x": 113,
+                "y": 257,
                 "w": 16,
                 "h": 16
             },
@@ -452,7 +452,7 @@
         }
     },
     "meta": {
-        "image": "simpleSpriteSheet.png",
+        "image": "simpleSpriteSheet3.png",
         "size": {
             "w": 300,
             "h": 298

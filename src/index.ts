@@ -22,20 +22,24 @@ const app = new PIXI.Application({
 const stage = app.stage;
 
 window.onload = async (): Promise<void> => {
-    await loadGameAssets();
-    setInterval(() => {
-        app.renderer.backgroundColor = Math.random() * 0xFFFFFF;
-    }, 12000);
+    try {
+        await loadGameAssets();
+        setInterval(() => {
+            app.renderer.backgroundColor = Math.random() * 0xFFFFFF;
+        }, 12000);
 
-    initKeyboardInterraction();
+        initKeyboardInterraction();
 
-    document.body.appendChild(app.view);
+        document.body.appendChild(app.view);
 
-    debug();
-    resizeCanvas();
+        debug();
+        resizeCanvas();
 
-    initMapService(stage);
-    setBirdAsSprite(stage);
+        initMapService(stage);
+        setBirdAsSprite(stage);
+    } catch (e) {
+        console.warn(e);
+    }
 };
 
 function resizeCanvas(): void {
