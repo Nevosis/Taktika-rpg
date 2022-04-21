@@ -1,0 +1,48 @@
+{
+    "frames": {
+        "magician.png": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 8,
+                "h": 8
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 8,
+                "h": 8
+            },
+            "sourceSize": {
+                "w": 8,
+                "h": 8
+            }
+        },
+        "barbarian.png": {
+            "frame": {
+                "x": 8,
+                "y": 0,
+                "w": 8,
+                "h": 8
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 8,
+                "h": 8
+            },
+            "sourceSize": {
+                "w": 8,
+                "h": 8
+            }
+        }
+    },
+    "meta": {
+        "image": "sprite-sheetx8.png",
+        "size": {
+            "w": 128,
+            "h": 40
+        },
+        "scale": "1"
+    }
+}

@@ -5,6 +5,9 @@ import { initMapService } from "./services/mapService/map";
 import { setBirdAsSprite } from "./components/bird";
 import { initKeyboardInterraction } from "./services/interractionService/keyboard";
 import { debug } from "./utils/debug";
+import { initGame } from "./game"
+import { initGameEvents } from "./services/gameService/game.events";
+
 
 declare const VERSION: string;
 
@@ -20,6 +23,9 @@ const app = new PIXI.Application({
 });
 
 const stage = app.stage;
+
+
+
 
 window.onload = async (): Promise<void> => {
     try {
@@ -37,6 +43,8 @@ window.onload = async (): Promise<void> => {
 
         initMapService(stage);
         setBirdAsSprite(stage);
+        initGame(stage);
+        initGameEvents();
     } catch (e) {
         console.warn(e);
     }

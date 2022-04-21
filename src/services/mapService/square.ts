@@ -17,8 +17,6 @@ export type Case = {
     damage: number
 }
 
-
-
 function getCaseTextureOver(_case: Case) {
     if (_case.squareType.damagable && _case.damage >= _case.squareType.damagable.damageTreeshold) {
         return _case.squareType.damagable.textureFromSelectedDamagable;
@@ -63,6 +61,7 @@ export function initSquareSprite(posX: number, posY: number, stage: PIXI.Contain
 
     squareSprite.interactive = square.interractive;
     squareSprite.anchor.set(0, 0);
+    squareSprite.scale.set(4, 4);
     squareSprite.position.set(posX * pixelSquareRatio, posY * pixelSquareRatio);
 
     let _case = {

@@ -12,6 +12,9 @@ export async function loadGameAssets() {
         console.warn("loadGameAssets PROMISE");
         const loader = PIXI.Loader.shared;
         loader.add("rabbit", "./assets/simpleSpriteSheet.json");
+        // loader.add("charactersx8", "./assets/chars/charx8.json");
+        //loader.add("charactersx16", "./assets/chars/charx16.json");
+        loader.add("charactersx16", "./assets/chars/Barbarianx16.json");
 
         loader.onComplete.once(() => {
             console.warn("comple");

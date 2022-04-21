@@ -5,12 +5,11 @@ import { initSquareSprite, Case } from "./square";
 
 
 
-
 export function initMapService(stage: PIXI.Container) {
     let map: Case[][] = [];
 
     for (let x = 0; x < width; x++) {
-        map.push([])
+        map.push([]);
         for (let y = 0; y < height; y++) {
             if (x === 0 || x === width - 1 || y === 0 || y === height - 1)
                 map[x].push(initSquareSprite(x, y, stage, squares.WATER));

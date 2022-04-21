@@ -1,10 +1,10 @@
 import * as PIXI from "pixi.js";
 
 // 1 square = 16x16 pixel
-export const pixelSquareRatio = 16;
+export const pixelSquareRatio = 64;
 
-export const height = 50;
-export const width = 50;
+export const height = 20;
+export const width = 20;
 
 const water = {
     textureFrom: "groundBlue.png",
