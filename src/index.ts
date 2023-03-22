@@ -1,12 +1,14 @@
 import * as PIXI from "pixi.js";
 import "./style.css";
+import "./services/actionsService/action.css";
 import { gameWidth, gameHeight, loadGameAssets } from "./config";
 import { initMapService } from "./services/mapService/map";
 import { setBirdAsSprite } from "./components/bird";
 import { initKeyboardInterraction } from "./services/interractionService/keyboard";
 import { debug } from "./utils/debug";
-import { initGame } from "./game"
+import { initGame } from "./game";
 import { initGameEvents } from "./services/gameService/game.events";
+import { initActionsContainer } from "./services/actionsService/actionsHtml";
 
 
 declare const VERSION: string;
@@ -38,6 +40,7 @@ window.onload = async (): Promise<void> => {
 
         document.body.appendChild(app.view);
 
+        initActionsContainer();
         debug();
         resizeCanvas();
 

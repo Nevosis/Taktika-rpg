@@ -2,11 +2,28 @@ body {
     overflow: hidden;
     margin: 0 auto;
     background-color: black;
+    display: flex;
+}
+
+#Actions {
+    color: blue;
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+#ActionDescription {
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
 }
 
 #Debug {
-    color:red;
-    top:0;
-    right:0;
-    position:fixed;
+    color: red;
+    top: 0;
+    right: 0;
+    position: fixed;
 }

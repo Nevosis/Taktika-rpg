@@ -2,9 +2,10 @@
 import eventEmitter from "../../utils/events";
 import * as PIXI from "pixi.js";
 import { height, width, pixelSquareRatio, squares, SquareType } from "./config";
-import { ITEM_POINTED } from "../../utils/debug";
 
 
+export const ITEM_POINTED = "itemPointed";
+export const ITEM_POINTED_OVER = "itemPointedOver";
 
 
 export type Case = {
@@ -38,15 +39,15 @@ function damageUnit(_case: Case) {
 
 function onOver(_case: Case) {
     _case.squareSprite.on("pointerdown", () => {
-        damageUnit(_case);
-        console.warn("damage")
+        // damageUnit(_case);
+        //console.warn("damage")
         _case.squareSprite.texture = PIXI.Texture.from(getCaseTextureOver(_case));
         eventEmitter.emit(ITEM_POINTED, _case, "case");
     });
 
     // Pointer over
     _case.squareSprite.on("pointerover", () => {
-        eventEmitter.emit(ITEM_POINTED, _case, "case");
+        eventEmitter.emit(ITEM_POINTED_OVER, _case, "case");
         _case.squareSprite.texture = PIXI.Texture.from(getCaseTextureOver(_case));
     });
 

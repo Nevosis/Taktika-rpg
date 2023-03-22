@@ -1,8 +1,7 @@
 import eventEmitter from "../utils/events";
 import { ADD_CHARACTER, PRINT_GAME_VALUES, RESET_GAME_VALUES } from "../services/gameService/game.events";
+import { ITEM_POINTED } from "../services/mapService/square";
 
-
-export const ITEM_POINTED = "itemPointed";
 
 let debugs = {
     itemPointed: ""

@@ -1,0 +1,19 @@
+#Actions {
+    color: blue;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+#ActionDescription {
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 22px;
+}
+
+.actionButton {
+    height: 45px;
+    width: 100px;
+    margin-top: 20px;
+}
